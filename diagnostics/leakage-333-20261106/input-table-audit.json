@@ -1,0 +1,247 @@
+{
+  "base": "d93bdaa3c61530e1ed9e9f38a8f7904793f71795",
+  "data": [
+    {
+      "tech": "freepdk45",
+      "path": "E:\\Company\\_codex_research_20261106\\work\\eda\\openram-leakage\\technology\\freepdk45\\sim_data\\sim_data.csv",
+      "rows": 324,
+      "names": [
+        "num_words",
+        "word_size",
+        "words_per_row",
+        "local_array_size",
+        "area",
+        "process",
+        "voltage",
+        "temperature",
+        "slew",
+        "load",
+        "rise_delay",
+        "fall_delay",
+        "rise_slew",
+        "fall_slew",
+        "write1_power",
+        "write0_power",
+        "read1_power",
+        "read0_power",
+        "leakage_power"
+      ],
+      "uniqueValues": {
+        "num_words": [
+          "1024",
+          "128",
+          "16",
+          "2048",
+          "256",
+          "32",
+          "512",
+          "64"
+        ],
+        "word_size": [
+          "12",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "21",
+          "22",
+          "23",
+          "26",
+          "27",
+          "32",
+          "4",
+          "5",
+          "6",
+          "64",
+          "7",
+          "8",
+          "9"
+        ],
+        "words_per_row": [
+          "1",
+          "16",
+          "2",
+          "4",
+          "8"
+        ],
+        "local_array_size": [
+          "0",
+          "1",
+          "10",
+          "118",
+          "14",
+          "15",
+          "17",
+          "18",
+          "186",
+          "191",
+          "23",
+          "249",
+          "31",
+          "38",
+          "4",
+          "40",
+          "49",
+          "5",
+          "54",
+          "60",
+          "7",
+          "75",
+          "85",
+          "86",
+          "89"
+        ],
+        "process": [
+          "TT"
+        ],
+        "voltage": [
+          "1.0"
+        ],
+        "temperature": [
+          "25"
+        ],
+        "slew": [
+          "0.00125",
+          "0.005",
+          "0.04"
+        ],
+        "load": [
+          "0.052275",
+          "0.2091",
+          "0.8364"
+        ]
+      },
+      "geometryGroupColumns": [
+        "num_words",
+        "word_size",
+        "words_per_row",
+        "local_array_size"
+      ],
+      "geometryGroupCount": 36
+    },
+    {
+      "tech": "scn4m_subm",
+      "path": "E:\\Company\\_codex_research_20261106\\work\\eda\\openram-leakage\\technology\\scn4m_subm\\sim_data\\sim_data.csv",
+      "rows": 360,
+      "names": [
+        "num_words",
+        "word_size",
+        "words_per_row",
+        "local_array_size",
+        "area",
+        "process",
+        "voltage",
+        "temperature",
+        "slew",
+        "load",
+        "rise_delay",
+        "fall_delay",
+        "rise_slew",
+        "fall_slew",
+        "write1_power",
+        "write0_power",
+        "read1_power",
+        "read0_power",
+        "leakage_power"
+      ],
+      "uniqueValues": {
+        "num_words": [
+          "1024",
+          "128",
+          "16",
+          "2048",
+          "256",
+          "32",
+          "512",
+          "64"
+        ],
+        "word_size": [
+          "10",
+          "12",
+          "128",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "21",
+          "22",
+          "23",
+          "26",
+          "27",
+          "32",
+          "4",
+          "5",
+          "6",
+          "64",
+          "7",
+          "8",
+          "9"
+        ],
+        "words_per_row": [
+          "1",
+          "16",
+          "2",
+          "4",
+          "8"
+        ],
+        "local_array_size": [
+          "0",
+          "1",
+          "10",
+          "118",
+          "14",
+          "15",
+          "17",
+          "18",
+          "186",
+          "191",
+          "21",
+          "23",
+          "249",
+          "25",
+          "31",
+          "38",
+          "4",
+          "40",
+          "49",
+          "5",
+          "54",
+          "60",
+          "7",
+          "75",
+          "85",
+          "86",
+          "89"
+        ],
+        "process": [
+          "TT"
+        ],
+        "voltage": [
+          "5.0"
+        ],
+        "temperature": [
+          "25"
+        ],
+        "slew": [
+          "0.0125",
+          "0.05",
+          "0.4"
+        ],
+        "load": [
+          "2.45605",
+          "39.2968",
+          "9.8242"
+        ]
+      },
+      "geometryGroupColumns": [
+        "num_words",
+        "word_size",
+        "words_per_row",
+        "local_array_size"
+      ],
+      "geometryGroupCount": 40
+    }
+  ]
+}

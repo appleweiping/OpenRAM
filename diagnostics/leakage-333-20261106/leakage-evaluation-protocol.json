@@ -1,0 +1,20 @@
+{
+  "frozen_at_utc": "2026-11-07T03:33:53Z",
+  "stage": "frozen before fitting/comparing candidates; data metadata inspection only",
+  "issue": "VLSIDA/OpenRAM333",
+  "maintainer_request_boundary": "Maintainer confirms poor leakage fit and asks whether leakage should be modeled separately. They did not prescribe or endorse the model choice below.",
+  "data": "Both complete shipped technology/freepdk45 and technology/scn4m_subm sim_data/sim_data.csv at freshly fetched origin/dev. No row caps, synthetic technology labels, shuffled alternative data, label edits or Liberty golden regeneration.",
+  "raw_features": "Use actual analytical_util.get_data (including its log2(num_words) and process encoding), first nine non-area columns; raw leakage_power target in CSV units.",
+  "arms": [
+    "reference: actual current OpenRAM Ridge fit and KFold10 cross_validation on its existing globally minmax-scaled table, to preserve exact diagnostic comparability",
+    "controlled baseline: sklearn Pipeline(MinMaxScaler, Ridge(alpha=1.0)) fit only on each training fold, scored in physical target units",
+    "single predeclared candidate: same training-fold-only feature pipeline, TransformedTargetRegressor(func=log, inverse_func=exp), Ridge alpha=1.0; targets strictly positive; no clipping and no hyperparameter search"
+  ],
+  "splits": [
+    "KFold(n_splits=10, shuffle=False), identical row order and split indices for all three arms; retain all per-fold R2 values and all OOF predictions",
+    "LeaveOneGroupOut over the exact tuple of the first four structural feature columns (num_words, word_size, words_per_row, local_array_size), same groups for controlled baseline/candidate; no tuning on these held-out geometries"
+  ],
+  "metrics": "Primary: mean of all 10 KFold R2 scores (current API metric) and positivity. Also report pooled OOF R2, MAE, median/95th/max relative absolute error, negative/nonpositive counts and every fold. For grouped splits report pooled OOF R2 and all group metrics; constant-target fold R2 reported with conventional sklearn behavior and noted, not silently removed.",
+  "predeclared_admissibility_for_production_change": "Require the candidate to improve both complete datasets' KFold mean R2 AND grouped pooled R2 versus controlled baseline, not worsen either protocol's MAE on either dataset, and have zero nonpositive predictions. Preserve non-leakage production predictions byte-identically, maintain existing API and tests. If any criterion fails, do not claim leakage fixed or silently tune; retain the full diagnostic and explain the remaining model decision.",
+  "scope": "Numerical scientific-software correctness assessment, not a novel recommendation method, SPICE characterization, model physical-accuracy certification, independent-fold significance or SOTA claim. Production changes additionally need actual baseline-to-fix regression and independent source review."
+}
